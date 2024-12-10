@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Claim</title>
+</head>
+<body>
+    <h1>Edit Claim</h1>
+    <form action="claims" method="post">
+        <input type="hidden" name="action" value="edit">
+        <input type="hidden" name="id" value="${claim.id}">
+        
+        <label>Policy ID:</label>
+        <input type="text" name="policyId" value="${claim.policyId}" required><br>
+        
+        <label>Description:</label>
+        <input type="text" name="description" value="${claim.description}" required><br>
+        
+        <label>Amount:</label>
+        <input type="number" name="amount" value="${claim.amount}" step="0.01" required><br>
+        
+        <label>Status:</label>
+        <input type="text" name="status" value="${claim.status}" required><br>
+        
+        <button type="submit">Update Claim</button>
+    </form>
+</body>
+</html>
